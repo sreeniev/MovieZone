@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_zone/core/colors/colors.dart';
-import 'package:movie_zone/core/constants.dart';
 import 'package:movie_zone/presentation/shorts/widgets/video_action_widget.dart';
 
 class VideoListItem extends StatelessWidget {
