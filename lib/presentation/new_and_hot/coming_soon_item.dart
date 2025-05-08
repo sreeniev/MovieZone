@@ -41,7 +41,7 @@ class ComingSoonItem extends StatelessWidget {
                     ),
                   ),
                   Spacer(),
-                  _myListButton(),
+                  _remindMeButton(),
                   kWidth20,
                   _infoButton(),
                   kWidth,
@@ -98,7 +98,7 @@ class ComingSoonItem extends StatelessWidget {
     );
   }
 
-  Column _myListButton() {
+  Column _remindMeButton() {
     return Column(
       children: [
         Icon(Icons.notifications, color: kWhiteColor, size: 23),

@@ -8,14 +8,19 @@ environment:
 
 dependencies:
   bordered_text: ^2.0.0
+  build_runner: ^2.4.15
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.1
+  freezed: ^3.0.6
   google_fonts: ^6.2.1
+  json_annotation: ^4.9.0
+  json_serializable: ^6.9.5
 
 dev_dependencies:
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true

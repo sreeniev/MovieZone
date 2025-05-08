@@ -10,16 +10,22 @@ class EveryoneWatchingItem extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return SizedBox(
       width: width,
-      height: 480,
+      height: 470,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Friends', style: kBoldWhiteText.copyWith(fontSize: 25)),
+          kHeight,
+          Text(
+            'fhihgefiuh iefhiwehfiuh wefihefi hief ihefhwefhwe hihgefiuh iefhiwehfiuh wefihefi hief ihefhwefhwe',
+            style: kBoldWhiteText.copyWith(fontSize: 16, color: Colors.grey),
+          ),
+          kHeight20,
           Stack(
             children: [
               SizedBox(
-                width: double.infinity,
-                height: 300,
+                width: width,
+                height: 250,
                 child: Image.network(
                   'https://media.themoviedb.org/t/p/w533_and_h300_bestv2/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg',
                   fit: BoxFit.cover,
@@ -28,29 +34,19 @@ class EveryoneWatchingItem extends StatelessWidget {
               Positioned(right: 15, bottom: 15, child: _muteButton()),
             ],
           ),
-          Row(
-            children: [
-              Text(
-                'TALL GIRL',
-                style: kBoldWhiteText.copyWith(fontSize: 35, letterSpacing: -2),
-              ),
-              Spacer(),
-              _myListButton(),
-              kWidth20,
-              _infoButton(),
-              kWidth,
-            ],
-          ),
-
-          Text(
-            'Coming Soon',
-            style: kBoldWhiteText.copyWith(fontSize: 16, color: Colors.grey),
-          ),
           kHeight,
-          Text('TALL GIRL', style: kBoldWhiteText),
-          Text(
-            'fhihgefiuh iefhiwehfiuh wefihefi hief ihefhwefhwe hihgefiuh iefhiwehfiuh wefihefi hief ihefhwefhwe',
-            style: kBoldWhiteText.copyWith(fontSize: 12, color: Colors.grey),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                _shareButton(),
+                kWidth20,
+                _myListButton(),
+                kWidth20,
+                _infoButton(),
+                kWidth,
+              ],
+            ),
           ),
         ],
       ),
@@ -68,18 +64,11 @@ class EveryoneWatchingItem extends StatelessWidget {
     );
   }
 
-  Column _dateColumn() {
+  Column _shareButton() {
     return Column(
       children: [
-        Text(
-          'FEB',
-          style: kBoldWhiteText.copyWith(fontSize: 23, color: Colors.grey),
-        ),
-
-        Text(
-          '11',
-          style: kBoldWhiteText.copyWith(fontSize: 23, letterSpacing: 3),
-        ),
+        Icon(Icons.share, color: kWhiteColor, size: 25),
+        Text('Share', style: TextStyle(fontSize: 14)),
       ],
     );
   }
@@ -87,8 +76,8 @@ class EveryoneWatchingItem extends StatelessWidget {
   Column _myListButton() {
     return Column(
       children: [
-        Icon(Icons.notifications, color: kWhiteColor, size: 23),
-        Text('Remind Me', style: TextStyle(fontSize: 12)),
+        Icon(Icons.add, color: kWhiteColor, size: 25),
+        Text('My List', style: TextStyle(fontSize: 14)),
       ],
     );
   }
@@ -96,8 +85,8 @@ class EveryoneWatchingItem extends StatelessWidget {
   Column _infoButton() {
     return Column(
       children: [
-        Icon(Icons.info_outline, color: kWhiteColor, size: 23),
-        Text('Info', style: TextStyle(fontSize: 12)),
+        Icon(Icons.play_arrow, color: kWhiteColor, size: 25),
+        Text('Play', style: TextStyle(fontSize: 14)),
       ],
     );
   }
